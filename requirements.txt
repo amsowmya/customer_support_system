@@ -4,4 +4,7 @@ langchain-community
 langchain-astradb
 python-dotenv
 langchain_google_genai
+fastapi
+uvicorn
+python-multipart
 -e .

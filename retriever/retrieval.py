@@ -30,7 +30,7 @@ class Retriever:
         self.db_application_token = os.getenv('ASTRA_DB_APPLICATION_TOKEN')
         self.db_keyspace = os.getenv('ASTRA_DB_KEYSPACE')
     
-    def create_retriever(self):
+    def load_retriever(self):
         if not self.vstore:
              collection_name = self.config['astra_db']['collection_name']
              
@@ -49,8 +49,9 @@ class Retriever:
             return retriever
     
     def call_retriever(self, query: str) -> List[Document]:
-        retriever = self.create_retriever()
-        retriever.get_relevant_documents(query)
+        retriever = self.load_retriever()
+        output = retriever.invoke(query)
+        return output
         
         
 if __name__ == "__main__":

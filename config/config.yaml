@@ -9,5 +9,7 @@ retriever:
   top_k: 3 
 
 llm:
-  provider: "google"
-  model_name: "gemini-1.5-pro"
+  # provider: "google"
+  # model_name: "gemini-1.5-pro"
+  provider: "groq"
+  model_name: "llama-3.3-70b-versatile"

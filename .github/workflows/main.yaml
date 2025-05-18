@@ -8,7 +8,7 @@ on:
 jobs:
   build-and-push-ecr-image:
     name: Build and push to Amazon ECR 
-    run-om: ubuntu-latest 
+    runs-on: ubuntu-latest 
 
     steps:
     - name: checkout code

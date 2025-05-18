@@ -8,4 +8,5 @@ fastapi
 uvicorn
 jinja2
 python-multipart
+langchain_groq
 -e .
